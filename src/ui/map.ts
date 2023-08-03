@@ -615,10 +615,8 @@ export class Map extends Camera {
             if (!this._container) {
                 throw new Error(`Container '${options.container}' not found.`);
             }
-        } else if (options.container instanceof HTMLElement) {
-            this._container = options.container;
         } else {
-            throw new Error('Invalid type: \'container\' must be a String or HTMLElement.');
+            this._container = options.container;
         }
 
         if (options.maxBounds) {
